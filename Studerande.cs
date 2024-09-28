@@ -1,23 +1,42 @@
 ﻿namespace Studieplatform;
 
-public class Studerande
+public class Studerande : Person
 {
 
-    public String Name { get; protected set; } ="";
-    public String LastName { get; protected set; } ="";
-    public int Phone { get; protected set; }
-    public string IdNumber { get; protected set; } ="";
-    public string Address { get; protected set; } ="";
-    public string PostalCode { get; protected set; } ="";
-    public string City { get; protected set; } ="";
-    public required List<Studerande> Pupils { get; set; }
-    public Studerande()
+
+    public Studerande(string name)
     {
-        List<Studerande> Pupils = new List<Studerande>();
+        Name = name;
+        Find();
+
+        
     }
 
-    public void AddPupil(Studerande name)
+
+
+    public void Find()
     {
-        Pupils.Add(name);
+        if (Name == "Benny")
+        {
+            LastName = "Bollträ";
+            Phone = 0738059333;
+            IdNumber = "94-04-23-0000";
+            Address = "Knogjärnsgatan 27";
+            PostalCode = "270 69";
+            City = "Önnarp";
+        }
+        else if (Name == "Sara")
+        {
+            LastName = "Hjalmarsson";
+            Phone = 073804003;
+            IdNumber = "93-04-23-0000";
+            Address = "Knogjärnsgatan 29";
+            PostalCode = "270 69";
+            City = "Önnarp";
+        }
+    }
+    public override string ToString()
+    {
+        return $"Namn: {Name}\nEfternamn: {LastName}\nTelefon: {Phone}\nPersonnummer: {IdNumber}\nAdress: {Address}\nPostnummer: {PostalCode}\nStad: {City}\n";
     }
 }    

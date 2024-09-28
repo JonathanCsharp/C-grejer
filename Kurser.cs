@@ -8,17 +8,21 @@ public class Kurs : Ikurser
     public int CourseLength { get ; set ; }
     public DateTime StartDate { get ; set ; }
     public DateTime EndDate { get ; set ; }
-    public required List<Kurs> CourseList { get; set; }
+    public Person person { get; set; } = new Person();
+    
+    
 
-    public Kurs()
-    {
-        List<Kurs> CourseList = new List<Kurs>();
-    }
+    // public Kurs()
+    // {
+    //     List<Kurs> CourseList = new List<Kurs>();
+    // }
 
     // Metoder
 
-    public void AddCourse(Kurs course)
+    public void Find()
     {
-        CourseList.Add(course);
+        
     }
+
+
 }
