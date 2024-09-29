@@ -9,7 +9,11 @@ public class Utbildningsledare : Lärare
       Find();
    }
 
-   public override void Find()
+    public Utbildningsledare()
+    {
+    }
+
+    public override void Find()
    {
       if (Name == "Lena")
       {
@@ -36,4 +40,8 @@ public class Utbildningsledare : Lärare
       EnploymentDate = DateTime.Now.AddDays(-90);
       }
    }
+    public override string ToString()
+    {
+        return $"Namn: {Name} Efternamn: {LastName} Personnummer: {IdNumber} Adress: {Address}-{PostalCode}-{City} Kunskapsområde: {FieldOfKnowledge} Ansvarsområde: {AreaOfAuthority} Anställningsdatum: {EnploymentDate}\n";
+    }
 }

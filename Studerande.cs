@@ -34,9 +34,27 @@ public class Studerande : Person
             PostalCode = "270 69";
             City = "Önnarp";
         }
+        else if (Name == "Dennis")
+        {
+            LastName = "Hjalmarsson";
+            Phone = 073804003;
+            IdNumber = "93-04-23-0000";
+            Address = "Knogjärnsgatan 29";
+            PostalCode = "270 69";
+            City = "Önnarp";
+        }
+        else if (Name == "Emil")
+        {
+            LastName = "Hjalmarsson";
+            Phone = 073804003;
+            IdNumber = "93-04-23-0000";
+            Address = "Knogjärnsgatan 29";
+            PostalCode = "270 69";
+            City = "Önnarp";
+        }
     }
     public override string ToString()
     {
-        return $"Namn: {Name}\nEfternamn: {LastName}\nTelefon: {Phone}\nPersonnummer: {IdNumber}\nAdress: {Address}\nPostnummer: {PostalCode}\nStad: {City}\n";
+        return $"Namn: {Name} Efternamn: {LastName} Telefon: {Phone} Personnummer: {IdNumber} Adress: {Address}-{PostalCode} Stad: {City}\n";
     }
 }    

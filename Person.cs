@@ -9,6 +9,5 @@ public class Person
     public string Address { get; protected set; } ="";
     public string PostalCode { get; protected set; } ="";
     public string City { get; protected set; } ="";
-    // public Kurs Course { get; set; } = new Kurs();
    
 }
