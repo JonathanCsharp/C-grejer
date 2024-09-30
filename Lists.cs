@@ -3,13 +3,10 @@
 public class Lists
 {
 
-
- public List<Kurs> CourseList{ get; set; } = new List<Kurs>();
-
-
+ public List<Kurs> _CourseList{ get; private set; } = new List<Kurs>();
 
       public void AddCourse(Kurs course)
     {
-        CourseList.Add(course);
+        _CourseList.Add(course);
     }
 }

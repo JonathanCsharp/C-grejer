@@ -22,8 +22,8 @@ public class Lärare : Person
             Address = "740gatan 19";
             PostalCode = "740 08";
             City = "Volvotown";
-            FieldOfKnowledge = "";
-            AreaOfAuthority = ""; 
+            FieldOfKnowledge = "DevOps, Frontend";
+            AreaOfAuthority = "DevOps, Frontend"; 
     }
     public override string ToString()
     {

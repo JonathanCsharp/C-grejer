@@ -8,11 +8,7 @@ public class Studerande : Person
     {
         Name = name;
         Find();
-
-        
     }
-
-
 
     public void Find()
     {

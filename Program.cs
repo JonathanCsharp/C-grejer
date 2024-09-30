@@ -29,20 +29,20 @@ class Program
         pupil = new Studerande("Emil");
         Frontend.AddPupil(pupil);
         
-        foreach (var x in lists.CourseList)
+        foreach (var x in lists._CourseList)
         {
             Console.WriteLine(x);
         }
 
         Console.ForegroundColor = ConsoleColor.DarkRed;
-        foreach (var x in DevOps.Pupils)
+        foreach (var x in DevOps._Pupils)
         {
             Console.WriteLine("Elev i DevOps: {0}", x);
         }
         Console.ResetColor();
         // Console.WriteLine(Frontend);
         Console.ForegroundColor = ConsoleColor.DarkBlue;
-        foreach (var x in Frontend.Pupils)
+        foreach (var x in Frontend._Pupils)
         {
             Console.WriteLine("Elev i Frontend: {0}", x);
         }
