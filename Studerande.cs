@@ -15,7 +15,7 @@ public class Studerande : Person
         if (Name == "Benny")
         {
             LastName = "Bollträ";
-            Phone = 0738059333;
+            Phone = "0738059333";
             IdNumber = "94-04-23-0000";
             Address = "Knogjärnsgatan 27";
             PostalCode = "270 69";
@@ -24,7 +24,7 @@ public class Studerande : Person
         else if (Name == "Sara")
         {
             LastName = "Hjalmarsson";
-            Phone = 073804003;
+            Phone = "073804003";
             IdNumber = "93-04-23-0000";
             Address = "Knogjärnsgatan 29";
             PostalCode = "270 69";
@@ -33,7 +33,7 @@ public class Studerande : Person
         else if (Name == "Dennis")
         {
             LastName = "Hjalmarsson";
-            Phone = 073804003;
+            Phone = "073804003";
             IdNumber = "93-04-23-0000";
             Address = "Knogjärnsgatan 29";
             PostalCode = "270 69";
@@ -42,7 +42,7 @@ public class Studerande : Person
         else if (Name == "Emil")
         {
             LastName = "Hjalmarsson";
-            Phone = 073804003;
+            Phone = "073804003";
             IdNumber = "93-04-23-0000";
             Address = "Knogjärnsgatan 29";
             PostalCode = "270 69";

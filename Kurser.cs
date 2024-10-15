@@ -1,33 +1,26 @@
 ﻿
 namespace Studieplatform;
 
-public class Kurs 
+public class Kurs : Ikurser
 {
-    public int _CourseNumber { get ; private set ; }
-    public string _NameOfCourse { get ; private set ; } ="";
-    public string _CourseLength { get ; private set ; } ="";
-    public DateTime _StartDate { get ; private set ; }
-    public DateTime _EndDate { get ; private set ; }
-    public string _ClassRoom { get; private set; } ="";
-    public Lärare Teacher { get; set; } = new Lärare();
-    public Utbildningsledare EducationLeader { get; set; } = new Utbildningsledare();
-    public Utbildningsledare Admin { get; set; } = new Utbildningsledare(); 
+    public int CourseNumber { get ; set ; }
+    public string NameOfCourse { get ; set ; } ="";
+    public string CourseLength { get ; set ; } ="";
+    public DateTime StartDate { get ; set ; }
+    public DateTime EndDate { get ; set ; }
+    public string ClassRoom { get; set; } ="";
+    public Lärare Teacher { get; set; }
+    public Utbildningsledare EducationLeader { get; set; }
+    public Utbildningsledare Admin { get; set; }
     public List<Studerande> _Pupils { get; private set; } = new List<Studerande>();
-    // public Lists lists { get; set; }
 
-
-
-    // public Person person { get; set; } = new Person();
-    
-    
-
-    public Kurs(int courseNumber)
+    public Kurs(int courseNumber, string lärare, string utbildning, string admin)
     {
-        _CourseNumber = courseNumber;
+        CourseNumber = courseNumber;
         Find();
-        // Lärare Teacher = new Lärare(Per);
-        // Utbildningsledare EducationLeader = new Utbildningsledare(Lena);
-        // Utbildningsledare Admin = new Utbildningsledare(Karin);
+        Teacher = new Lärare(lärare);
+        EducationLeader = new Utbildningsledare(utbildning);
+        Admin = new Utbildningsledare(admin);
         List<Studerande> Pupils = new List<Studerande>();
     }
 
@@ -39,27 +32,27 @@ public class Kurs
     }
     public void Find()
     {
-        if (_CourseNumber == 1)
+        if (CourseNumber == 1)
         {
-            _NameOfCourse = "DevOps";
-            _CourseLength = "2 years";
-            _StartDate = DateTime.Now.AddDays(30);
-            _EndDate = DateTime.Now.AddYears(2);
-            _ClassRoom = "Ja";
+            NameOfCourse = "DevOps";
+            CourseLength = "2 years";
+            StartDate = DateTime.Now.AddDays(30);
+            EndDate = DateTime.Now.AddYears(2);
+            ClassRoom = "Ja";
 
         }
-        else if (_CourseNumber == 2)
+        else if (CourseNumber == 2)
         {
-            _NameOfCourse = "Frontend";
-            _CourseLength = "6 months";
-            _StartDate = DateTime.Now.AddDays(30);
-            _EndDate = DateTime.Now.AddMonths(6);
-            _ClassRoom = "Nä, distans";
+            NameOfCourse = "Frontend";
+            CourseLength = "6 months";
+            StartDate = DateTime.Now.AddDays(30);
+            EndDate = DateTime.Now.AddMonths(6);
+            ClassRoom = "Nä, distans";
         }
     }
     public override string ToString()
     {
-        return $"Kursnummer: {_CourseNumber} Kursnamn: {_NameOfCourse} KursLängd: {_CourseLength} Kursstart: {_StartDate} Kursslut: {_EndDate} klassrum: {_ClassRoom}\nLärare: {Teacher}\nUtbildningsledare: {EducationLeader}\nAdmin: {Admin}";
+        return $"Kursnummer: {CourseNumber} Kursnamn: {NameOfCourse} KursLängd: {CourseLength} Kursstart: {StartDate} Kursslut: {EndDate} klassrum: {ClassRoom}\nLärare: {Teacher}\nUtbildningsledare: {EducationLeader}\nAdmin: {Admin}";
     }
 
 }

@@ -10,14 +10,10 @@ public class Lärare : Person
         Find();
     }
 
-    public Lärare()
-    {
-    }
-
     public virtual void Find()
     {
             LastName = "740";
-            Phone = 0733784520;
+            Phone = "0733784520";
             IdNumber = "74-07-01-0000";
             Address = "740gatan 19";
             PostalCode = "740 08";

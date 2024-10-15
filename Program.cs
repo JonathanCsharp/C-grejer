@@ -1,14 +1,15 @@
-﻿namespace Studieplatform;
+﻿using System.Text.Encodings.Web;
+using System.Text.Json;
+
+namespace Studieplatform;
 
 class Program
 {
     static void Main()
     {
-        Kurs DevOps = new Kurs(1);
+        Kurs DevOps = new Kurs(1,"Pär","Lena","Karin");
         Lists lists = new Lists();
-        DevOps.EducationLeader = new Utbildningsledare("Lena");
-        DevOps.Admin = new Utbildningsledare("Karin");
-        DevOps.Teacher = new Lärare("Per");
+
         lists.AddCourse(DevOps);
 
         Studerande pupil = new Studerande("Benny");
@@ -16,12 +17,8 @@ class Program
         pupil = new Studerande("Sara");
         DevOps.AddPupil(pupil);
 
-        // Console.WriteLine(DevOps);
+        Kurs Frontend = new Kurs(2,"Pär","Lena","Karin");
 
-        Kurs Frontend = new Kurs(2);
-        Frontend.EducationLeader = new Utbildningsledare("Lena");
-        Frontend.Admin = new Utbildningsledare("Karin");
-        Frontend.Teacher = new Lärare("Per");
         lists.AddCourse(Frontend);
 
         pupil = new Studerande("Dennis");
@@ -40,11 +37,14 @@ class Program
             Console.WriteLine("Elev i DevOps: {0}", x);
         }
         Console.ResetColor();
-        // Console.WriteLine(Frontend);
+
         Console.ForegroundColor = ConsoleColor.DarkBlue;
         foreach (var x in Frontend._Pupils)
         {
             Console.WriteLine("Elev i Frontend: {0}", x);
         }
+        Console.ResetColor();
+        Lists.ConvertJson(lists);
+        Console.WriteLine(lists);
     }
 }
